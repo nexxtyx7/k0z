@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pesosemedidas
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MP_ACCESS_TOKEN
+        sync: false
+      - key: BASE_URL
+        sync: false
