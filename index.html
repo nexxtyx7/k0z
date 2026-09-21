@@ -282,35 +282,6 @@ section[id]{scroll-margin-top:12px}
 .products-more button:hover{background:var(--deep);color:#fff}
 
 /* ---------- Painel do dono ---------- */
-.admin-section{background:var(--mist)}
-.admin-box{
-  max-width:760px;margin:44px auto 0;padding:28px;
-  background:var(--cream);border:1px solid rgba(39,82,62,.12);
-  border-radius:14px;box-shadow:0 22px 55px -35px rgba(23,60,44,.55);
-}
-.admin-box h3{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--deep)}
-.admin-note{margin-top:8px;color:var(--muted)}
-.admin-login{display:grid;gap:12px;margin-top:24px}
-.admin-login input,.admin-form input,.admin-form textarea{
-  width:100%;padding:14px 16px;border:1px solid rgba(39,82,62,.2);
-  border-radius:10px;background:#fff;color:var(--ink);font:inherit;
-}
-.admin-form{display:grid;gap:14px;margin-top:24px}
-.admin-form label{font-weight:700;color:var(--deep)}
-.admin-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-.admin-list{display:grid;gap:12px;margin-top:30px}
-.admin-item{
-  display:flex;align-items:center;justify-content:space-between;gap:14px;
-  padding:14px;border:1px solid rgba(39,82,62,.12);border-radius:10px;background:#fff;
-}
-.admin-item strong{color:var(--deep)}
-.admin-item small{display:block;color:var(--muted);margin-top:3px}
-.admin-item button{
-  border:1px solid rgba(39,82,62,.2);border-radius:999px;padding:9px 13px;
-  background:var(--cream);color:var(--deep);font:inherit;font-weight:700;cursor:pointer;
-}
-.admin-item button.danger{color:#8b3f2c}
-.admin-status{margin-top:12px;color:var(--muted);font-size:.92rem}
 @media (min-width:700px){
   .admin-form{grid-template-columns:1fr 1fr}
   .admin-form .full{grid-column:1/-1}
@@ -704,57 +675,6 @@ section[id]{scroll-margin-top:12px}
 
 </main>
 
-  <!-- PAINEL DO DONO -->
-  <section class="section admin-section" id="painel">
-    <div class="container">
-      <div class="admin-box">
-        <p class="eyebrow">Área administrativa</p>
-        <h2 class="title" style="font-size:clamp(2.1rem,8vw,3.2rem)">Painel do <em>dono.</em></h2>
-        <p class="admin-note">Adicione e gerencie os produtos do catálogo.</p>
-
-        <div id="admin-login-wrap">
-          <form class="admin-login" id="admin-login">
-            <input id="admin-password" type="password" placeholder="Senha do painel" autocomplete="current-password" required>
-            <button class="btn btn-light" type="submit">Entrar no painel</button>
-          </form>
-          <p class="admin-status" id="login-status"></p>
-        </div>
-
-        <div id="admin-content" hidden>
-          <form class="admin-form" id="product-form">
-            <div>
-              <label for="product-name">Nome do produto</label>
-              <input id="product-name" required placeholder="Ex.: Castanha de caju">
-            </div>
-            <div>
-              <label for="product-price">Preço</label>
-              <input id="product-price" required placeholder="Ex.: R$ 29,90">
-            </div>
-            <div>
-              <label for="product-category">Categoria</label>
-              <input id="product-category" placeholder="Ex.: Chás, vitaminas, suplementos...">
-            </div>
-            <div class="full">
-              <label for="product-image">Foto (URL da imagem)</label>
-              <input id="product-image" type="url" placeholder="https://...">
-            </div>
-            <div class="full">
-              <label for="product-description">Descrição</label>
-              <textarea id="product-description" rows="3" placeholder="Descrição curta do produto"></textarea>
-            </div>
-            <div class="admin-actions full">
-              <button class="btn btn-light" type="submit" id="save-product">Adicionar produto</button>
-              <button class="btn btn-line" type="button" id="cancel-edit" style="display:none">Cancelar edição</button>
-              <button class="btn btn-line" type="button" id="logout-admin">Sair</button>
-            </div>
-          </form>
-
-          <p class="admin-status" id="admin-status"></p>
-          <div class="admin-list" id="admin-list"></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 <footer class="site-footer">
   <div class="container">
@@ -820,11 +740,11 @@ section[id]{scroll-margin-top:12px}
   var visibleLimit = 8;
   var productsCache = [];
   var SUPABASE_URL = window.SUPABASE_URL;
-  var SUPABASE_ANON_KEY = window.SUPABASE_ANON_KEY;
+  var SUPABASE_PUBLISHABLE_KEY = window.SUPABASE_PUBLISHABLE_KEY;
 
   function esc(v){ return String(v || '').replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]; }); }
-  function client(){ return window.supabase && window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY); }
-  function validConfig(){ return SUPABASE_URL && SUPABASE_ANON_KEY && SUPABASE_URL.indexOf('COLE_AQUI') === -1 && SUPABASE_ANON_KEY.indexOf('COLE_AQUI') === -1; }
+  function client(){ return window.supabase && window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY); }
+  function validConfig(){ return SUPABASE_URL && SUPABASE_ANON_KEY && SUPABASE_URL.indexOf('COLE_AQUI') === -1 && SUPABASE_PUBLISHABLE_KEY.indexOf('COLE_AQUI') === -1; }
 
   function getCategories(products){
     var set = {};
@@ -865,7 +785,7 @@ section[id]{scroll-margin-top:12px}
   async function load(){
     if(!validConfig()){ productsCache=[]; renderPublic(true); return; }
     var sb=client();
-    var result=await sb.from('products').select('*').order('created_at',{ascending:false});
+    var result=await sb.from('products').select('*').order('id',{ascending:false});
     if(result.error){ console.error(result.error); productsCache=[]; renderPublic(true); return; }
     productsCache=result.data||[]; renderPublic(true);
   }

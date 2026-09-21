@@ -1,19 +1,15 @@
-1. Crie um projeto em Supabase.
-2. No Supabase, abra SQL Editor e cole todo o conteúdo de supabase.sql. Execute.
-3. Em Authentication > Users, crie o usuário do dono com e-mail e senha.
-4. Em Project Settings > API, copie:
-   - Project URL
-   - Publishable/anon key (a chave pública)
-5. Abra config.js e substitua:
-   COLE_AQUI_A_URL_DO_SEU_PROJETO
-   COLE_AQUI_A_CHAVE_ANON_PUBLICA
-6. Envie para o GitHub estes arquivos:
-   index.html
-   admin.html
-   config.js
-7. Abra:
-   https://pesosemedidas.onrender.com/admin.html
-   e entre com o usuário criado no Supabase.
-8. Se já existirem produtos salvos no painel antigo neste celular, use "Migrar catálogo antigo".
+PESOS E MEDIDAS — VERSÃO SUPABASE
 
-IMPORTANTE: NÃO coloque a service_role key no site. Use somente a chave pública/anon/publishable.
+Arquivos:
+- index.html = loja pública
+- admin.html = painel do dono
+- config.js = conexão Supabase
+- admin-policies.sql = libera alterações para usuários autenticados
+
+IMPORTANTE:
+1. A chave em config.js é a Publishable Key. Não coloque Secret Key no site.
+2. No Supabase, crie um usuário de autenticação para o dono (Authentication > Users).
+3. Rode admin-policies.sql no SQL Editor.
+4. No GitHub/Render, envie os 4 arquivos na mesma pasta.
+5. Painel: /admin.html
+6. A loja compra pelo WhatsApp; não há checkout/pagamento integrado.

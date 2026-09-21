@@ -1,4 +1,2 @@
-// COLOQUE AQUI os dados do seu projeto Supabase.
-// Nunca coloque a service_role key neste arquivo.
-window.SUPABASE_URL = 'COLE_AQUI_A_URL_DO_SEU_PROJETO';
-window.SUPABASE_ANON_KEY = 'COLE_AQUI_A_CHAVE_ANON_PUBLICA';
+window.SUPABASE_URL = 'https://qvnilvhxudayuzebcnpg.supabase.co';
+window.SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_n7nr7IZ9rbb54Z7MgM7o7g_vpLafA__';
