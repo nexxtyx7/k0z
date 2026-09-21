@@ -1,0 +1,19 @@
+1. Crie um projeto em Supabase.
+2. No Supabase, abra SQL Editor e cole todo o conteúdo de supabase.sql. Execute.
+3. Em Authentication > Users, crie o usuário do dono com e-mail e senha.
+4. Em Project Settings > API, copie:
+   - Project URL
+   - Publishable/anon key (a chave pública)
+5. Abra config.js e substitua:
+   COLE_AQUI_A_URL_DO_SEU_PROJETO
+   COLE_AQUI_A_CHAVE_ANON_PUBLICA
+6. Envie para o GitHub estes arquivos:
+   index.html
+   admin.html
+   config.js
+7. Abra:
+   https://pesosemedidas.onrender.com/admin.html
+   e entre com o usuário criado no Supabase.
+8. Se já existirem produtos salvos no painel antigo neste celular, use "Migrar catálogo antigo".
+
+IMPORTANTE: NÃO coloque a service_role key no site. Use somente a chave pública/anon/publishable.
