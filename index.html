@@ -744,7 +744,7 @@ section[id]{scroll-margin-top:12px}
 
   function esc(v){ return String(v || '').replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]; }); }
   function client(){ return window.supabase && window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY); }
-  function validConfig(){ return SUPABASE_URL && SUPABASE_ANON_KEY && SUPABASE_URL.indexOf('COLE_AQUI') === -1 && SUPABASE_PUBLISHABLE_KEY.indexOf('COLE_AQUI') === -1; }
+  function validConfig(){ return !!(SUPABASE_URL && SUPABASE_PUBLISHABLE_KEY && SUPABASE_URL.indexOf('COLE_AQUI') === -1 && SUPABASE_PUBLISHABLE_KEY.indexOf('COLE_AQUI') === -1); }
 
   function getCategories(products){
     var set = {};
