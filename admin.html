@@ -8,345 +8,145 @@
 <script src="config.js"></script>
 
 <style>
-:root{
-  --deep:#243b2b;
-  --sage:#71886a;
-  --bg:#f5f7f2;
-  --card:#fff;
-  --line:#dce4d9;
-  --muted:#68756a;
-  --danger:#a43f34
-}
-
+:root{--deep:#243b2b;--sage:#71886a;--bg:#f5f7f2;--card:#fff;--line:#dce4d9;--muted:#68756a;--danger:#a43f34}
 *{box-sizing:border-box}
-
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--deep);
-  font-family:Arial,sans-serif
-}
-
-.top{
-  background:var(--deep);
-  color:#fff;
-  padding:16px
-}
-
-.top-inner{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px
-}
-
-.brand{
-  color:#fff;
-  text-decoration:none;
-  font-weight:800
-}
-
-.brand small{
-  display:block;
-  opacity:.7;
-  font-weight:500;
-  margin-top:3px
-}
-
-.actions{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap
-}
-
-.btn{
-  border:0;
-  border-radius:10px;
-  padding:11px 15px;
-  font-weight:800;
-  cursor:pointer
-}
-
-.btn-main{
-  background:var(--deep);
-  color:#fff
-}
-
-.btn-light{
-  background:#fff;
-  color:var(--deep)
-}
-
-.btn-line{
-  background:transparent;
-  border:1px solid var(--line);
-  color:var(--deep)
-}
-
-.wrap{
-  max-width:1100px;
-  margin:auto;
-  padding:25px 16px 60px
-}
-
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:20px;
-  box-shadow:0 8px 30px #1d2d1b0d
-}
-
-.login{
-  max-width:460px;
-  margin:45px auto
-}
-
-.field{
-  margin-bottom:14px
-}
-
-.field label{
-  display:block;
-  font-weight:800;
-  margin-bottom:6px
-}
-
-.field input,
-.form-grid input,
-.form-grid textarea,
-.search{
-  width:100%;
-  padding:12px;
-  border:1px solid var(--line);
-  border-radius:10px;
-  font:inherit;
-  background:#fff;
-  color:var(--deep)
-}
-
-.status{
-  min-height:20px;
-  color:var(--muted)
-}
-
-.error{
-  color:var(--danger)
-}
-
-.dashboard{
-  display:none
-}
-
-.hero{
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  align-items:center;
-  margin-bottom:18px
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:13px
-}
-
-.full{
-  grid-column:1/-1
-}
-
-.row{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap
-}
-
-.list{
-  display:grid;
-  gap:10px;
-  max-height:700px;
-  overflow:auto;
-  margin-top:12px
-}
-
-.item{
-  display:grid;
-  grid-template-columns:58px 1fr auto;
-  gap:12px;
-  align-items:center;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:10px
-}
-
-.thumb{
-  width:58px;
-  height:58px;
-  border-radius:10px;
-  overflow:hidden;
-  background:#f0f3ec;
-  display:grid;
-  place-items:center
-}
-
-.thumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block
-}
-
-.item strong{
-  display:block
-}
-
-.item small{
-  display:block;
-  color:var(--muted);
-  margin-top:4px
-}
-
-.item-actions{
-  display:flex;
-  gap:6px;
-  flex-wrap:wrap;
-  justify-content:flex-end
-}
-
-.item-actions button{
-  border:1px solid var(--line);
-  background:#fff;
-  border-radius:9px;
-  padding:8px 9px;
-  font-weight:750
-}
-
-.item-actions .danger{
-  color:var(--danger)
-}
+body{margin:0;background:var(--bg);color:var(--deep);font-family:Arial,sans-serif}
+.top{background:var(--deep);color:#fff;padding:16px}
+.top-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{color:#fff;text-decoration:none;font-weight:800}
+.brand small{display:block;opacity:.7;font-weight:500;margin-top:3px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:800;cursor:pointer}
+.btn-main{background:var(--deep);color:#fff}
+.btn-light{background:#fff;color:var(--deep)}
+.btn-line{background:transparent;border:1px solid var(--line);color:var(--deep)}
+.wrap{max-width:1100px;margin:auto;padding:25px 16px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 30px #1d2d1b0d}
+.login{max-width:460px;margin:45px auto}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:800;margin-bottom:6px}
+.field input,.form-grid input,.form-grid textarea,.search{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff;color:var(--deep)}
+.status{min-height:20px;color:var(--muted)}
+.error{color:var(--danger)}
+.dashboard{display:none}
+.hero{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.full{grid-column:1/-1}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.list{display:grid;gap:10px;max-height:700px;overflow:auto;margin-top:12px}
+.item{display:grid;grid-template-columns:58px 1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px}
+.thumb{width:58px;height:58px;border-radius:10px;overflow:hidden;background:#f0f3ec;display:grid;place-items:center}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.item strong{display:block}
+.item small{display:block;color:var(--muted);margin-top:4px}
+.item-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.item-actions button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 9px;font-weight:750}
+.item-actions .danger{color:var(--danger)}
 
 .preview{
+  position:relative;
+  width:100%;
+  max-width:420px;
+  aspect-ratio:1/1;
   margin-top:9px;
-  border:1px dashed #cbd5ca;
-  border-radius:12px;
-  min-height:180px;
-  display:grid;
-  place-items:center;
+  border:2px dashed #cbd5ca;
+  border-radius:14px;
   overflow:hidden;
   background:#fafbf8;
-  color:var(--muted)
+  color:var(--muted);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  touch-action:none;
+  user-select:none;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .preview img{
-  width:100%;
-  height:240px;
-  object-fit:cover;
-  display:block
+  position:absolute;
+  max-width:none;
+  width:auto;
+  height:auto;
+  min-width:100%;
+  min-height:100%;
+  cursor:grab;
+  user-select:none;
+  -webkit-user-drag:none;
+  touch-action:none;
+  pointer-events:auto;
 }
 
-.file-box{
-  border:2px dashed var(--line);
-  border-radius:12px;
-  padding:18px;
-  background:#fafbf8
+.preview img:active{cursor:grabbing}
+
+.preview-hint{
+  position:absolute;
+  z-index:5;
+  bottom:10px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:6px 11px;
+  border-radius:999px;
+  background:rgba(36,59,43,.8);
+  color:#fff;
+  font-size:12px;
+  pointer-events:none;
+  white-space:nowrap;
 }
 
-.file-box label{
-  display:block;
+.zoom-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  max-width:420px;
+  margin:12px auto 0;
+}
+
+.zoom-box label{
+  font-size:13px;
   font-weight:800;
-  margin-bottom:8px
+  white-space:nowrap;
 }
 
-.file-input{
+.zoom-box input{
   width:100%;
-  padding:10px;
-  border:1px solid var(--line);
-  border-radius:10px;
-  background:#fff;
-  color:var(--deep);
-  cursor:pointer
+  accent-color:var(--deep);
 }
 
-.file-help{
+.zoom-value{
+  min-width:45px;
+  font-size:13px;
+  font-weight:800;
+  text-align:right;
+}
+
+.image-help{
+  max-width:420px;
+  margin:8px auto 0;
   color:var(--muted);
-  font-size:.85rem;
-  margin-top:7px
+  font-size:13px;
+  line-height:1.4;
 }
 
-.notice{
-  padding:12px 14px;
-  border-radius:12px;
-  background:#eef5eb;
-  color:#466047;
-  font-size:.88rem;
-  line-height:1.45;
-  margin-bottom:18px
-}
-
-.stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-bottom:18px
-}
-
-.stat{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:14px
-}
-
-.stat strong{
-  display:block;
-  font-size:1.5rem
-}
-
-.muted{
-  color:var(--muted)
-}
+.notice{padding:12px 14px;border-radius:12px;background:#eef5eb;color:#466047;font-size:.88rem;line-height:1.45;margin-bottom:18px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.stat strong{display:block;font-size:1.5rem}
+.muted{color:var(--muted)}
 
 @media(max-width:800px){
-  .grid{
-    grid-template-columns:1fr
-  }
+.grid{grid-template-columns:1fr}
 }
 
 @media(max-width:560px){
-  .form-grid{
-    grid-template-columns:1fr
-  }
-
-  .full{
-    grid-column:auto
-  }
-
-  .stats{
-    grid-template-columns:1fr
-  }
-
-  .hero{
-    align-items:flex-start;
-    flex-direction:column
-  }
-
-  .item{
-    grid-template-columns:50px 1fr
-  }
-
-  .item-actions{
-    grid-column:1/-1;
-    justify-content:flex-start
-  }
+.form-grid{grid-template-columns:1fr}
+.full{grid-column:auto}
+.stats{grid-template-columns:1fr}
+.hero{align-items:flex-start;flex-direction:column}
+.item{grid-template-columns:50px 1fr}
+.item-actions{grid-column:1/-1;justify-content:flex-start}
+.preview{max-width:100%}
 }
 </style>
 </head>
@@ -354,169 +154,198 @@ body{
 <body>
 
 <header class="top">
-  <div class="top-inner">
-    <a class="brand" href="index.html">
-      Pesos e Medidas
-      <small>Painel administrativo</small>
-    </a>
+<div class="top-inner">
 
-    <div class="actions">
-      <a class="btn btn-light" href="index.html">Ver loja</a>
-      <button id="logout" class="btn btn-light" hidden>Sair</button>
-    </div>
-  </div>
+<a class="brand" href="index.html">
+Pesos e Medidas
+<small>Painel administrativo</small>
+</a>
+
+<div class="actions">
+<a class="btn btn-light" href="index.html">Ver loja</a>
+<button id="logout" class="btn btn-light" hidden>Sair</button>
+</div>
+
+</div>
 </header>
 
 <main class="wrap">
 
 <section id="login" class="card login">
-  <h1>Acesso do dono</h1>
 
-  <p class="muted">
-    Entre com o e-mail e a senha cadastrados no Supabase.
-  </p>
+<h1>Acesso do dono</h1>
 
-  <form id="loginForm">
+<p class="muted">
+Entre com o e-mail e a senha cadastrados no Supabase.
+</p>
 
-    <div class="field">
-      <label for="email">E-mail</label>
-      <input id="email" type="email" autocomplete="username" required>
-    </div>
+<form id="loginForm">
 
-    <div class="field">
-      <label for="password">Senha</label>
-      <input id="password" type="password" autocomplete="current-password" required>
-    </div>
+<div class="field">
+<label for="email">E-mail</label>
+<input id="email" type="email" autocomplete="username" required>
+</div>
 
-    <button class="btn btn-main" type="submit">Entrar</button>
+<div class="field">
+<label for="password">Senha</label>
+<input id="password" type="password" autocomplete="current-password" required>
+</div>
 
-    <p id="loginStatus" class="status"></p>
+<button class="btn btn-main" type="submit">
+Entrar
+</button>
 
-  </form>
+<p id="loginStatus" class="status"></p>
+
+</form>
+
 </section>
 
 
 <section id="dashboard" class="dashboard">
 
 <div class="hero">
-  <div>
-    <p class="muted" style="margin:0 0 5px">Área administrativa</p>
-    <h1>Catálogo</h1>
-  </div>
+
+<div>
+<p class="muted" style="margin:0 0 5px">
+Área administrativa
+</p>
+
+<h1>Catálogo</h1>
 </div>
 
-<div class="notice">
-  Os produtos deste painel ficam no banco online. Assim, o dono pode editar o catálogo de outros aparelhos depois de entrar com a mesma conta.
 </div>
+
+
+<div class="notice">
+Os produtos deste painel ficam no banco online. Assim, o dono pode editar o catálogo de outros aparelhos depois de entrar com a mesma conta.
+</div>
+
 
 <div class="stats">
 
-  <div class="stat">
-    <strong id="statProducts">0</strong>
-    <span>Produtos</span>
-  </div>
+<div class="stat">
+<strong id="statProducts">0</strong>
+<span>Produtos</span>
+</div>
 
-  <div class="stat">
-    <strong id="statAvailable">0</strong>
-    <span>Disponíveis</span>
-  </div>
+<div class="stat">
+<strong id="statAvailable">0</strong>
+<span>Disponíveis</span>
+</div>
 
-  <div class="stat">
-    <strong id="statSold">0</strong>
-    <span>Esgotados</span>
-  </div>
+<div class="stat">
+<strong id="statSold">0</strong>
+<span>Esgotados</span>
+</div>
 
 </div>
 
 
 <div class="grid">
 
+
 <section class="card">
 
-<h2 id="formTitle">Novo produto</h2>
+<h2 id="formTitle">
+Novo produto
+</h2>
 
 <form id="productForm">
 
 <div class="form-grid">
 
-<div>
-  <label>Nome</label>
-  <input id="name" required placeholder="Ex.: Chá de camomila">
-</div>
 
 <div>
-  <label>Preço</label>
-  <input id="price" required placeholder="R$ 29,90">
-</div>
-
-<div>
-  <label>Categoria</label>
-  <input id="category" placeholder="Chás, vitaminas...">
+<label>Nome</label>
+<input id="name" required placeholder="Ex.: Chá de camomila">
 </div>
 
 
-<div class="file-box">
+<div>
+<label>Preço</label>
+<input id="price" required placeholder="R$ 29,90">
+</div>
 
-  <label for="imageFile">Imagem do produto</label>
 
-  <input
-    id="imageFile"
-    class="file-input"
-    type="file"
-    accept="image/*"
-  >
+<div>
+<label>Categoria</label>
+<input id="category" placeholder="Chás, vitaminas...">
+</div>
 
-  <div class="file-help">
-    Escolha uma imagem do celular ou computador.
-  </div>
+
+<div>
+<label>Imagem do produto</label>
+<input id="imageFile" type="file" accept="image/*">
+</div>
+
+
+<div class="full">
+
+<label>Prévia da imagem</label>
+
+<div id="preview" class="preview">
+Prévia da imagem
+</div>
+
+
+<div class="zoom-box" id="zoomBox" hidden>
+
+<label for="zoom">
+Zoom
+</label>
+
+<input
+id="zoom"
+type="range"
+min="100"
+max="300"
+value="100"
+step="1"
+>
+
+<span id="zoomValue" class="zoom-value">
+100%
+</span>
+
+</div>
+
+
+<p class="image-help" id="imageHelp" hidden>
+Arraste a imagem com o dedo ou mouse para escolher a parte que aparecerá no produto.
+</p>
 
 </div>
 
 
 <div class="full">
 
-  <label>Descrição</label>
+<label>Descrição</label>
 
-  <textarea
-    id="description"
-    rows="3"
-    placeholder="Descrição curta do produto"
-  ></textarea>
-
-</div>
-
-
-<div class="full">
-
-  <div id="preview" class="preview">
-    Prévia da imagem
-  </div>
+<textarea
+id="description"
+rows="3"
+placeholder="Descrição curta do produto"
+></textarea>
 
 </div>
+
 
 </div>
 
 
 <div class="row" style="margin-top:14px">
 
-  <button
-    id="save"
-    class="btn btn-main"
-    type="submit"
-  >
-    Adicionar produto
-  </button>
+<button id="save" class="btn btn-main">
+Adicionar produto
+</button>
 
-  <button
-    id="cancel"
-    type="button"
-    class="btn btn-line"
-    hidden
-  >
-    Cancelar
-  </button>
+<button id="cancel" type="button" class="btn btn-line" hidden>
+Cancelar
+</button>
 
 </div>
+
 
 <p id="formStatus" class="status"></p>
 
@@ -530,14 +359,15 @@ body{
 <h2>Produtos cadastrados</h2>
 
 <input
-  id="search"
-  class="search"
-  placeholder="Buscar produto..."
+id="search"
+class="search"
+placeholder="Buscar produto..."
 >
 
 <div id="list" class="list"></div>
 
 </section>
+
 
 </div>
 
@@ -549,559 +379,874 @@ body{
 <script>
 
 const sb=supabase.createClient(
-  window.SUPABASE_URL,
-  window.SUPABASE_PUBLISHABLE_KEY
+window.SUPABASE_URL,
+window.SUPABASE_PUBLISHABLE_KEY
 );
 
 const $=id=>document.getElementById(id);
 
 const esc=v=>String(v??'').replace(
-  /[&<>"']/g,
-  c=>({
-    '&':'&amp;',
-    '<':'&lt;',
-    '>':'&gt;',
-    '"':'&quot;',
-    "'":'&#039;'
-  }[c])
+/[&<>"']/g,
+c=>({
+'&':'&amp;',
+'<':'&lt;',
+'>':'&gt;',
+'"':'&quot;',
+"'":'&#039;'
+}[c])
 );
+
 
 let products=[];
 let editing=null;
-let selectedImageData='';
 
+
+/* IMAGEM */
+
+let selectedImage='';
+let originalImage='';
+let imageObject=null;
+
+let dragX=0;
+let dragY=0;
+
+let startX=0;
+let startY=0;
+
+let dragging=false;
+
+let zoom=1;
+
+
+function showPreview(src){
+
+const preview=$('preview');
+
+if(!src){
+
+preview.innerHTML='Prévia da imagem';
+
+$('zoomBox').hidden=true;
+$('imageHelp').hidden=true;
+
+imageObject=null;
+
+return;
+}
+
+
+preview.innerHTML=
+'<img id="previewImg" src="'+esc(src)+'" draggable="false">'+
+'<div class="preview-hint">Arraste a imagem</div>';
+
+
+$('zoomBox').hidden=false;
+$('imageHelp').hidden=false;
+
+
+const img=$('previewImg');
+
+
+img.onload=function(){
+
+imageObject=img;
+
+zoom=1;
+
+$('zoom').value=100;
+$('zoomValue').textContent='100%';
+
+dragX=0;
+dragY=0;
+
+prepareImage();
+
+};
+
+
+img.addEventListener('pointerdown',function(e){
+
+dragging=true;
+
+startX=e.clientX-dragX;
+startY=e.clientY-dragY;
+
+img.setPointerCapture(e.pointerId);
+
+});
+
+
+img.addEventListener('pointermove',function(e){
+
+if(!dragging)return;
+
+dragX=e.clientX-startX;
+dragY=e.clientY-startY;
+
+limitPosition();
+
+positionImage();
+
+});
+
+
+img.addEventListener('pointerup',function(){
+
+dragging=false;
+
+});
+
+
+img.addEventListener('pointercancel',function(){
+
+dragging=false;
+
+});
+
+}
+
+
+function prepareImage(){
+
+const img=imageObject;
+
+if(!img)return;
+
+const preview=$('preview');
+
+const pw=preview.clientWidth;
+const ph=preview.clientHeight;
+
+const iw=img.naturalWidth;
+const ih=img.naturalHeight;
+
+const baseScale=Math.max(
+pw/iw,
+ph/ih
+);
+
+img.style.width=(iw*baseScale*zoom)+'px';
+img.style.height=(ih*baseScale*zoom)+'px';
+
+limitPosition();
+positionImage();
+
+}
+
+
+function positionImage(){
+
+const img=imageObject;
+
+if(!img)return;
+
+img.style.left='50%';
+img.style.top='50%';
+
+img.style.transform=
+'translate(calc(-50% + '+dragX+'px),calc(-50% + '+dragY+'px))';
+
+}
+
+
+function limitPosition(){
+
+const preview=$('preview');
+const img=imageObject;
+
+if(!preview || !img)return;
+
+
+const pw=preview.clientWidth;
+const ph=preview.clientHeight;
+
+const iw=img.offsetWidth;
+const ih=img.offsetHeight;
+
+
+const maxX=Math.max(
+0,
+(iw-pw)/2
+);
+
+const maxY=Math.max(
+0,
+(ih-ph)/2
+);
+
+
+dragX=Math.max(
+-maxX,
+Math.min(maxX,dragX)
+);
+
+dragY=Math.max(
+-maxY,
+Math.min(maxY,dragY)
+);
+
+}
+
+
+function resetImagePosition(){
+
+dragX=0;
+dragY=0;
+
+zoom=1;
+
+if($('zoom')){
+$('zoom').value=100;
+$('zoomValue').textContent='100%';
+}
+
+if(imageObject){
+
+prepareImage();
+
+}
+
+}
+
+
+/* ZOOM */
+
+$('zoom').addEventListener(
+'input',
+function(){
+
+zoom=Number(this.value)/100;
+
+$('zoomValue').textContent=
+this.value+'%';
+
+prepareImage();
+
+}
+);
+
+
+/* ESCOLHER IMAGEM */
+
+$('imageFile').addEventListener(
+'change',
+function(){
+
+const file=this.files[0];
+
+if(!file)return;
+
+
+if(!file.type.startsWith('image/')){
+
+$('formStatus').textContent=
+'Escolha uma imagem válida.';
+
+return;
+
+}
+
+
+const reader=new FileReader();
+
+
+reader.onload=function(e){
+
+selectedImage=e.target.result;
+
+originalImage=selectedImage;
+
+showPreview(selectedImage);
+
+};
+
+
+reader.readAsDataURL(file);
+
+}
+);
+
+
+/* TRANSFORMA A PRÉVIA EM IMAGEM QUADRADA */
+
+function createCroppedImage(){
+
+return new Promise(function(resolve){
+
+const preview=$('preview');
+const img=imageObject;
+
+if(!img || !selectedImage){
+
+resolve(selectedImage || '');
+
+return;
+
+}
+
+
+const size=900;
+
+const canvas=document.createElement('canvas');
+
+canvas.width=size;
+canvas.height=size;
+
+const ctx=canvas.getContext('2d');
+
+
+const pw=preview.clientWidth;
+const ph=preview.clientHeight;
+
+const iw=img.naturalWidth;
+const ih=img.naturalHeight;
+
+
+const baseScale=Math.max(
+pw/iw,
+ph/ih
+);
+
+const scale=baseScale*zoom;
+
+
+const displayedWidth=iw*scale;
+const displayedHeight=ih*scale;
+
+
+const imageLeft=
+(pw-displayedWidth)/2+
+dragX;
+
+const imageTop=
+(ph-displayedHeight)/2+
+dragY;
+
+
+const cropLeft=
+-imageLeft/scale;
+
+const cropTop=
+-imageTop/scale;
+
+
+const cropSize=
+pw/scale;
+
+
+ctx.drawImage(
+img,
+cropLeft,
+cropTop,
+cropSize,
+cropSize,
+0,
+0,
+size,
+size
+);
+
+
+resolve(
+canvas.toDataURL(
+'image/jpeg',
+0.88
+)
+);
+
+});
+
+}
+
+
+/* LOGIN */
 
 async function start(){
 
-  const {
-    data:{session}
-  }=await sb.auth.getSession();
+const {
+data:{session}
+}=await sb.auth.getSession();
 
-  if(session){
-    show();
-  }else{
-    $('login').style.display='block';
-  }
+if(session){
+
+show();
+
+}else{
+
+$('login').style.display='block';
+
+}
 
 }
 
 
 function show(){
 
-  $('login').style.display='none';
+$('login').style.display='none';
 
-  $('dashboard').style.display='block';
+$('dashboard').style.display='block';
 
-  $('logout').hidden=false;
+$('logout').hidden=false;
 
-  load();
+load();
 
 }
 
+
+/* CARREGAR PRODUTOS */
 
 async function load(){
 
-  const {
-    data,
-    error
-  }=await sb
-    .from('products')
-    .select('*')
-    .order('id',{ascending:false});
+const {
+data,
+error
+}=await sb
+.from('products')
+.select('*')
+.order('id',{ascending:false});
 
-  if(error){
 
-    $('formStatus').textContent=error.message;
+if(error){
 
-    return;
+$('formStatus').textContent=
+error.message;
 
-  }
-
-  products=data||[];
-
-  render();
+return;
 
 }
 
+
+products=data||[];
+
+render();
+
+}
+
+
+/* LISTA */
 
 function render(){
 
-  const term=$('search')
-    .value
-    .trim()
-    .toLocaleLowerCase('pt-BR');
-
-  const filtered=products.filter(p=>
-    (
-      String(p.name||'')+
-      ' '+
-      String(p.category||'')
-    )
-    .toLocaleLowerCase('pt-BR')
-    .includes(term)
-  );
-
-  $('statProducts').textContent=products.length;
-
-  $('statAvailable').textContent=
-    products.filter(p=>!p.sold_out).length;
-
-  $('statSold').textContent=
-    products.filter(p=>p.sold_out).length;
+const term=$('search').value
+.trim()
+.toLocaleLowerCase('pt-BR');
 
 
-  $('list').innerHTML=filtered.length
+const filtered=products.filter(
+p=>
+(
+String(p.name||'')+
+' '+
+String(p.category||'')
+)
+.toLocaleLowerCase('pt-BR')
+.includes(term)
+);
 
-    ?filtered.map(p=>`
 
-      <div class="item">
+$('statProducts').textContent=
+products.length;
 
-        <div class="thumb">
 
-          ${
-            p.image
-            ?`<img src="${esc(p.image)}" alt="">`
-            :'—'
-          }
+$('statAvailable').textContent=
+products.filter(
+p=>!p.sold_out
+).length;
 
-        </div>
 
-        <div>
+$('statSold').textContent=
+products.filter(
+p=>p.sold_out
+).length;
 
-          <strong>${esc(p.name)}</strong>
 
-          <small>
-            ${esc(p.price||'')}
-            ·
-            ${p.sold_out?'Esgotado':'Disponível'}
-            ${p.category?' · '+esc(p.category):''}
-          </small>
+$('list').innerHTML=
+filtered.length
+?
+filtered.map(p=>
 
-        </div>
+`<div class="item">
 
-        <div class="item-actions">
+<div class="thumb">
 
-          <button
-            data-a="toggle"
-            data-id="${p.id}"
-          >
-            ${p.sold_out?'Ativar':'Esgotar'}
-          </button>
+${p.image
+?`<img src="${esc(p.image)}" alt="">`
+:'—'}
 
-          <button
-            data-a="edit"
-            data-id="${p.id}"
-          >
-            Editar
-          </button>
+</div>
 
-          <button
-            class="danger"
-            data-a="delete"
-            data-id="${p.id}"
-          >
-            Excluir
-          </button>
+<div>
 
-        </div>
+<strong>
+${esc(p.name)}
+</strong>
 
-      </div>
+<small>
+${esc(p.price||'')} ·
+${p.sold_out?'Esgotado':'Disponível'}
+${p.category?' · '+esc(p.category):''}
+</small>
 
-    `).join('')
+</div>
 
-    :'<div class="muted">Nenhum produto encontrado.</div>';
+<div class="item-actions">
+
+<button
+data-a="toggle"
+data-id="${p.id}">
+${p.sold_out?'Ativar':'Esgotar'}
+</button>
+
+<button
+data-a="edit"
+data-id="${p.id}">
+Editar
+</button>
+
+<button
+class="danger"
+data-a="delete"
+data-id="${p.id}">
+Excluir
+</button>
+
+</div>
+
+</div>`
+
+).join('')
+
+:
+
+'<div class="muted">Nenhum produto encontrado.</div>';
 
 }
 
+
+/* RESET */
 
 function resetForm(){
 
-  editing=null;
+editing=null;
 
-  selectedImageData='';
+selectedImage='';
+originalImage='';
 
-  $('productForm').reset();
+imageObject=null;
 
-  $('formTitle').textContent='Novo produto';
+dragX=0;
+dragY=0;
+zoom=1;
 
-  $('save').textContent='Adicionar produto';
+$('productForm').reset();
 
-  $('cancel').hidden=true;
+$('formTitle').textContent=
+'Novo produto';
 
-  $('preview').textContent='Prévia da imagem';
+$('save').textContent=
+'Adicionar produto';
 
-  $('formStatus').textContent='';
+$('cancel').hidden=true;
+
+$('preview').innerHTML=
+'Prévia da imagem';
+
+$('zoomBox').hidden=true;
+
+$('imageHelp').hidden=true;
+
+$('formStatus').textContent='';
 
 }
 
 
-function showPreview(src){
+/* LOGIN */
 
-  $('preview').innerHTML=src
-    ?`<img src="${src}" alt="Prévia da imagem">`
-    :'Prévia da imagem';
+$('loginForm').addEventListener(
+'submit',
+async e=>{
+
+e.preventDefault();
+
+$('loginStatus').textContent=
+'Entrando...';
+
+
+const {error}=await sb.auth.signInWithPassword({
+
+email:$('email').value.trim(),
+
+password:$('password').value
+
+});
+
+
+if(error){
+
+$('loginStatus').textContent=
+error.message;
+
+return;
 
 }
+
+
+$('loginStatus').textContent='';
+
+show();
+
+}
+);
+
+
+/* LOGOUT */
+
+$('logout').addEventListener(
+'click',
+async()=>{
+
+await sb.auth.signOut();
+
+location.reload();
+
+}
+);
+
+
+/* BUSCA */
+
+$('search').addEventListener(
+'input',
+render
+);
+
+
+/* CANCELAR */
+
+$('cancel').addEventListener(
+'click',
+resetForm
+);
+
+
+/* SALVAR */
+
+$('productForm').addEventListener(
+'submit',
+async e=>{
+
+e.preventDefault();
+
+
+$('formStatus').textContent=
+'Salvando...';
+
+
+let finalImage=selectedImage;
 
 
 /*
-  Converte a imagem escolhida em uma versão menor.
-
-  Isso permite:
-  - usar celular ou PC
-  - não depender de URL externa
-  - diminuir o tamanho salvo no banco
-  - manter boa qualidade
+Se uma imagem foi escolhida,
+gera o recorte quadrado exatamente
+como está aparecendo na prévia.
 */
-function processImage(file){
 
-  return new Promise((resolve,reject)=>{
+if(imageObject){
 
-    if(!file){
-
-      resolve('');
-
-      return;
-
-    }
-
-    if(!file.type.startsWith('image/')){
-
-      reject(new Error('Escolha um arquivo de imagem.'));
-
-      return;
-
-    }
-
-    const reader=new FileReader();
-
-    reader.onload=e=>{
-
-      const img=new Image();
-
-      img.onload=()=>{
-
-        const maxSize=1200;
-
-        let width=img.width;
-        let height=img.height;
-
-        if(width>maxSize || height>maxSize){
-
-          const ratio=Math.min(
-            maxSize/width,
-            maxSize/height
-          );
-
-          width=Math.round(width*ratio);
-          height=Math.round(height*ratio);
-
-        }
-
-        const canvas=document.createElement('canvas');
-
-        canvas.width=width;
-        canvas.height=height;
-
-        const ctx=canvas.getContext('2d');
-
-        ctx.drawImage(
-          img,
-          0,
-          0,
-          width,
-          height
-        );
-
-        const result=canvas.toDataURL(
-          'image/jpeg',
-          .82
-        );
-
-        resolve(result);
-
-      };
-
-      img.onerror=()=>reject(
-        new Error('Não foi possível ler a imagem.')
-      );
-
-      img.src=e.target.result;
-
-    };
-
-    reader.onerror=()=>reject(
-      new Error('Não foi possível carregar o arquivo.')
-    );
-
-    reader.readAsDataURL(file);
-
-  });
+finalImage=
+await createCroppedImage();
 
 }
 
 
-$('imageFile').addEventListener('change',async e=>{
+const data={
 
-  const file=e.target.files[0];
+name:$('name').value.trim(),
 
-  if(!file){
+price:$('price').value.trim(),
 
-    selectedImageData='';
+category:$('category').value.trim(),
 
-    showPreview('');
+image:finalImage,
 
-    return;
+description:$('description').value.trim()
 
-  }
-
-  $('formStatus').textContent='Preparando imagem...';
-
-  try{
-
-    selectedImageData=await processImage(file);
-
-    showPreview(selectedImageData);
-
-    $('formStatus').textContent='Imagem pronta para salvar.';
-
-  }catch(error){
-
-    selectedImageData='';
-
-    showPreview('');
-
-    $('formStatus').textContent=error.message;
-
-  }
-
-});
+};
 
 
-$('loginForm').addEventListener('submit',async e=>{
-
-  e.preventDefault();
-
-  $('loginStatus').textContent='Entrando...';
-
-  const {error}=await sb.auth.signInWithPassword({
-
-    email:$('email').value.trim(),
-
-    password:$('password').value
-
-  });
-
-  if(error){
-
-    $('loginStatus').textContent=error.message;
-
-    return;
-
-  }
-
-  $('loginStatus').textContent='';
-
-  show();
-
-});
+let result;
 
 
-$('logout').addEventListener(
-  'click',
-  async()=>{
-    await sb.auth.signOut();
-    location.reload();
-  }
+if(editing){
+
+result=
+await sb
+.from('products')
+.update(data)
+.eq('id',editing);
+
+}else{
+
+result=
+await sb
+.from('products')
+.insert(data);
+
+}
+
+
+if(result.error){
+
+$('formStatus').textContent=
+result.error.message;
+
+return;
+
+}
+
+
+$('formStatus').textContent=
+editing
+?'Alterações salvas.'
+:'Produto adicionado.';
+
+
+resetForm();
+
+await load();
+
+}
 );
 
 
-$('search').addEventListener(
-  'input',
-  render
-);
-
-
-$('cancel').addEventListener(
-  'click',
-  resetForm
-);
-
-
-$('productForm').addEventListener(
-  'submit',
-  async e=>{
-
-    e.preventDefault();
-
-    $('formStatus').textContent='Salvando...';
-
-    /*
-      Se estiver editando e não escolher outra imagem,
-      mantém a imagem antiga.
-    */
-    let imageValue=selectedImageData;
-
-    if(!imageValue && editing){
-
-      const oldProduct=products.find(
-        x=>x.id===editing
-      );
-
-      imageValue=oldProduct?.image||'';
-
-    }
-
-    const data={
-
-      name:$('name').value.trim(),
-
-      price:$('price').value.trim(),
-
-      category:$('category').value.trim(),
-
-      image:imageValue,
-
-      description:$('description').value.trim()
-
-    };
-
-
-    let result;
-
-
-    if(editing){
-
-      result=await sb
-        .from('products')
-        .update(data)
-        .eq('id',editing);
-
-    }else{
-
-      result=await sb
-        .from('products')
-        .insert(data);
-
-    }
-
-
-    if(result.error){
-
-      $('formStatus').textContent=
-        result.error.message;
-
-      return;
-
-    }
-
-
-    $('formStatus').textContent=
-      editing
-      ?'Alterações salvas.'
-      :'Produto adicionado.';
-
-    resetForm();
-
-    await load();
-
-  }
-);
-
+/* AÇÕES DOS PRODUTOS */
 
 $('list').addEventListener(
-  'click',
-  async e=>{
+'click',
+async e=>{
 
-    const b=e.target.closest('button[data-a]');
+const b=
+e.target.closest('button[data-a]');
 
-    if(!b)return;
-
-    const id=Number(b.dataset.id);
-
-    const p=products.find(
-      x=>x.id===id
-    );
-
-    if(!p)return;
-
-    const a=b.dataset.a;
+if(!b)return;
 
 
-    if(a==='toggle'){
-
-      const r=await sb
-        .from('products')
-        .update({
-          sold_out:!p.sold_out
-        })
-        .eq('id',id);
-
-      if(r.error){
-
-        alert(r.error.message);
-
-      }
-
-    }
+const id=
+Number(b.dataset.id);
 
 
-    else if(a==='delete'){
-
-      if(!confirm('Excluir '+p.name+'?'))return;
-
-      const r=await sb
-        .from('products')
-        .delete()
-        .eq('id',id);
-
-      if(r.error){
-
-        alert(r.error.message);
-
-      }
-
-    }
+const p=
+products.find(x=>x.id===id);
 
 
-    else if(a==='edit'){
-
-      editing=id;
-
-      selectedImageData=p.image||'';
-
-      $('name').value=p.name||'';
-
-      $('price').value=p.price||'';
-
-      $('category').value=p.category||'';
-
-      $('description').value=p.description||'';
-
-      $('imageFile').value='';
-
-      $('formTitle').textContent='Editar produto';
-
-      $('save').textContent='Salvar alterações';
-
-      $('cancel').hidden=false;
-
-      showPreview(p.image||'');
-
-      window.scrollTo({
-        top:0,
-        behavior:'smooth'
-      });
-
-      return;
-
-    }
+if(!p)return;
 
 
-    await load();
+const a=b.dataset.a;
 
-  }
-);
+
+if(a==='toggle'){
+
+const r=
+await sb
+.from('products')
+.update({
+sold_out:!p.sold_out
+})
+.eq('id',id);
+
+
+if(r.error){
+
+alert(r.error.message);
+
+}
+
+}
+
+
+else if(a==='delete'){
+
+if(!confirm(
+'Excluir '+p.name+'?'
+))return;
+
+
+const r=
+await sb
+.from('products')
+.delete()
+.eq('id',id);
+
+
+if(r.error){
+
+alert(r.error.message);
+
+}
+
+}
+
+
+else if(a==='edit'){
+
+editing=id;
+
+
+$('name').value=
+p.name||'';
+
+$('price').value=
+p.price||'';
+
+$('category').value=
+p.category||'';
+
+$('description').value=
+p.description||'';
+
+
+selectedImage=
+p.image||'';
+
+originalImage=
+p.image||'';
+
+
+if(p.image){
+
+showPreview(p.image);
+
+}else{
+
+showPreview('');
+
+}
+
+
+$('formTitle').textContent=
+'Editar produto';
+
+$('save').textContent=
+'Salvar alterações';
+
+$('cancel').hidden=false;
+
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+
+return;
+
+}
+
+
+await load();
+
+});
 
 
 start();
