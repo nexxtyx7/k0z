@@ -83,7 +83,6 @@ address{font-style:normal}
 .container{width:100%;max-width:1120px;margin-inline:auto;padding-inline:20px}
 section[id]{scroll-margin-top:12px}
 
-/* ---------- Type helpers ---------- */
 .eyebrow{
   margin-bottom:20px;
   font-size:.78rem;font-weight:700;line-height:1.3;
@@ -102,7 +101,6 @@ section[id]{scroll-margin-top:12px}
 .title.light em{color:var(--sage)}
 .lead{margin-top:28px;max-width:44ch;color:var(--muted)}
 
-/* ---------- Buttons ---------- */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:12px;
   min-height:54px;padding:0 26px;
@@ -116,7 +114,6 @@ section[id]{scroll-margin-top:12px}
 .btn-line{border-color:rgba(255,255,255,.38);color:#fff}
 .btn-line:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.6)}
 
-/* ---------- Header ---------- */
 .site-header{position:relative;z-index:20;background:var(--deep);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;min-height:76px;padding-block:12px}
 .brand{display:inline-flex;align-items:center;gap:16px;text-decoration:none;color:#fff;min-width:0}
@@ -167,7 +164,6 @@ section[id]{scroll-margin-top:12px}
 }
 .js .nav li:last-child a{border-bottom:0}
 
-/* ---------- Hero ---------- */
 .hero{
   position:relative;overflow:hidden;color:#fff;
   background-color:var(--deep);
@@ -196,7 +192,6 @@ section[id]{scroll-margin-top:12px}
 .hero-art{width:min(100%,300px);margin-inline:auto}
 .hero-art svg{display:block;width:100%;height:auto}
 
-/* ---------- About ---------- */
 .section{padding:84px 0}
 .about{background:var(--cream)}
 .sec-num{display:flex;align-items:center;gap:16px;margin-bottom:26px;font-size:.95rem;font-weight:700;color:var(--clay)}
@@ -211,7 +206,6 @@ section[id]{scroll-margin-top:12px}
 .text-link .ic{width:20px;height:20px}
 .text-link:hover{border-bottom-color:var(--deep)}
 
-/* ---------- Services ---------- */
 .services{background:var(--mist)}
 .cards{display:grid;gap:18px;margin-top:48px}
 .card{
@@ -244,7 +238,6 @@ section[id]{scroll-margin-top:12px}
 .dark .card-arrow{border-color:rgba(255,255,255,.4);color:#fff}
 .dark .card-arrow:hover{background:rgba(255,255,255,.12)}
 
-/* ---------- Produtos ---------- */
 .products{background:var(--cream)}
 .products-head{display:grid;gap:18px}
 .products-tools{margin-top:34px;display:grid;gap:12px}
@@ -254,18 +247,47 @@ section[id]{scroll-margin-top:12px}
 .category-btn{flex:0 0 auto;border:1px solid rgba(39,82,62,.16);background:var(--cream);color:var(--deep);border-radius:999px;padding:9px 15px;font:inherit;font-size:.9rem;font-weight:700;cursor:pointer}
 .category-btn.active,.category-btn:hover{background:var(--deep);color:#fff;border-color:var(--deep)}
 .products-count{margin-top:8px;color:var(--muted);font-size:.9rem}
-.products-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}
-.product-card{
-  display:flex;flex-direction:column;overflow:hidden;
-  border:1px solid rgba(39,82,62,.12);border-radius:12px;
-  background:#fff;box-shadow:0 18px 40px -30px rgba(23,60,44,.45);
+
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:28px
 }
+
+.product-card{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  border:1px solid rgba(39,82,62,.12);
+  border-radius:12px;
+  background:#fff;
+  box-shadow:0 18px 40px -30px rgba(23,60,44,.45);
+}
+
 .product-photo{
-  aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;
-  background:var(--mist);color:var(--sage-ink);font-family:var(--serif);
+  aspect-ratio:1/1;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--mist);
+  color:var(--sage-ink);
+  font-family:var(--serif);
   font-size:1.2rem;
 }
-.product-info{padding:15px}.product-info h3{font-size:1.25rem}.product-info p{font-size:.88rem;line-height:1.45}.product-price{margin-top:11px;font-size:1rem}
+
+.product-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.product-info{padding:15px}
+.product-info h3{font-size:1.25rem}
+.product-info p{font-size:.88rem;line-height:1.45}
+.product-price{margin-top:11px;font-size:1rem}
 .product-info h3{font-family:var(--serif);font-weight:400;color:var(--ink)}
 .product-info p{margin-top:7px;color:var(--muted)}
 .product-price{display:block;font-weight:700;color:var(--deep)}
@@ -281,13 +303,11 @@ section[id]{scroll-margin-top:12px}
 .products-more button{border:1px solid var(--deep);background:transparent;color:var(--deep);border-radius:999px;padding:12px 22px;font:inherit;font-weight:700;cursor:pointer}
 .products-more button:hover{background:var(--deep);color:#fff}
 
-/* ---------- Painel do dono ---------- */
 @media (min-width:700px){
   .admin-form{grid-template-columns:1fr 1fr}
   .admin-form .full{grid-column:1/-1}
 }
 
-/* ---------- Reviews ---------- */
 .reviews{background:var(--cream)}
 .rating-grid{display:grid;gap:40px}
 .stars{display:flex;gap:10px}
@@ -301,7 +321,6 @@ section[id]{scroll-margin-top:12px}
 .quote{font-family:var(--serif);font-style:italic;font-size:1.45rem;line-height:1.4;color:var(--deep)}
 .quote-by{margin-top:14px;color:var(--muted)}
 
-/* ---------- Location ---------- */
 .location{background:var(--sand)}
 .place{display:grid;grid-template-columns:auto 1fr;column-gap:16px;margin-top:44px;align-items:start}
 .place .ic{width:28px;height:28px;color:var(--clay);margin-top:1px}
@@ -315,7 +334,6 @@ section[id]{scroll-margin-top:12px}
 .map-card svg{display:block;width:100%;height:auto}
 .loc-map{margin-top:44px}
 
-/* ---------- Contact ---------- */
 .contact{background:var(--deep);color:#fff}
 .contact-list{display:grid;gap:18px;margin-top:40px}
 .contact-list a{display:inline-flex;align-items:center;gap:16px;width:fit-content;max-width:100%;font-size:1.15rem;color:#E4ECE4;text-decoration:none;overflow-wrap:anywhere}
@@ -323,7 +341,6 @@ section[id]{scroll-margin-top:12px}
 .contact-list .ic{width:26px;height:26px;color:var(--sage)}
 .contact .btn{margin-top:38px}
 
-/* ---------- Footer ---------- */
 .site-footer{background:var(--deep-2);color:#B4C6B9;padding:44px 0 32px}
 .footer-grid{display:grid;gap:26px}
 .site-footer address{line-height:1.8}
@@ -333,7 +350,6 @@ section[id]{scroll-margin-top:12px}
 .copy{margin-top:34px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:.92rem;color:#8FA698}
 .copy p+p{margin-top:8px}
 
-/* ---------- Tablet / desktop ---------- */
 @media (min-width:560px){
   .hero-actions .btn{flex:0 0 auto;padding:0 26px;gap:12px}
 }
@@ -377,9 +393,9 @@ section[id]{scroll-margin-top:12px}
 }
 </style>
 </head>
+
 <body>
 
-<!-- Símbolos reutilizáveis (decorativos) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
     <symbol id="lf" viewBox="0 0 100 40"><path d="M2 20C22 0 72 0 98 20C72 40 22 40 2 20Z" fill="currentColor"/></symbol>
@@ -421,296 +437,354 @@ section[id]{scroll-margin-top:12px}
 
 <main>
 
-  <!-- INÍCIO -->
-  <section class="hero" id="inicio">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="hero-line">Naturalmente perto de você</p>
-        <h1>Pesos e Medidas <em>Produtos Naturais</em></h1>
-        <p class="hero-sub">Produtos naturais e atendimento próximo para você.</p>
-        <div class="hero-actions">
-          <a class="btn btn-light" href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Pesos%20e%20Medidas." target="_blank" rel="noopener noreferrer">
-            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
-            Falar no WhatsApp
-          </a>
-          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Pesos+e+Medidas+Produtos+Naturais%2C+R.+Rio+de+Janeiro%2C+336%2C+Centro%2C+Po%C3%A7os+de+Caldas%2C+MG" target="_blank" rel="noopener noreferrer">
-            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
-            Como chegar
-          </a>
-        </div>
-        <p class="hero-place">Centro de Poços de Caldas, MG</p>
-      </div>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="hero-line">Naturalmente perto de você</p>
+      <h1>Pesos e Medidas <em>Produtos Naturais</em></h1>
+      <p class="hero-sub">Produtos naturais e atendimento próximo para você.</p>
 
-      <div class="hero-art">
-        <svg viewBox="0 0 340 340" role="img" aria-label="Ilustração decorativa: cartaz em um cavalete com folhas">
-          <circle cx="170" cy="170" r="168" fill="none" stroke="#fff" stroke-opacity=".16"/>
-          <circle cx="170" cy="170" r="134" fill="none" stroke="#fff" stroke-opacity=".12"/>
-          <!-- pés do cavalete -->
-          <path d="M140 250L124 312M190 262L208 314" stroke="#A9BF9A" stroke-width="3" stroke-linecap="round" fill="none"/>
-          <!-- quadro e cartaz -->
-          <g transform="rotate(8 170 170)">
-            <rect x="110" y="72" width="168" height="212" fill="#1F4A37"/>
-            <rect x="96" y="58" width="164" height="210" fill="#EFE7D6"/>
-            <text x="112" y="100" font-family="Roboto,Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2.4" fill="#5C7A68">UMA ESCOLHA</text>
-            <text x="110" y="150" font-family="Newsreader,Georgia,serif" font-size="44" fill="#1F4A37">mais</text>
-            <text x="106" y="192" font-family="Newsreader,Georgia,serif" font-size="44" font-style="italic" fill="#B5673E">natural</text>
-            <use href="#lf" x="112" y="180" width="48" height="19" transform="rotate(-42 136 190)" style="color:#B7C9A7" opacity=".92"/>
-            <path d="M112 236H152" stroke="#B5673E" stroke-width="2" stroke-linecap="round"/>
-          </g>
-          <!-- folhas -->
-          <use href="#lf" x="226" y="52" width="58" height="23" transform="rotate(14 255 63)" style="color:#B7C9A7"/>
-          <path d="M262 214L284 152" stroke="#8FAA80" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-          <use href="#lf" x="266" y="118" width="54" height="21" transform="rotate(-68 293 128)" style="color:#8FAA80"/>
-          <use href="#lf" x="226" y="290" width="62" height="24" transform="rotate(22 257 302)" style="color:#B7C9A7"/>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section class="section about" id="sobre">
-    <div class="container about-grid">
-      <div>
-        <div class="sec-num" aria-hidden="true">01</div>
-        <p class="eyebrow">Sobre a loja</p>
-        <h2 class="title">O cuidado que cabe <em>na sua rotina.</em></h2>
-      </div>
-      <div class="about-copy">
-        <p>Na Pesos e Medidas Produtos Naturais, você encontra uma seleção de produtos naturais e um atendimento próximo e atencioso. Nossa loja está localizada no Centro de Poços de Caldas, oferecendo também opções de retirada e entrega.</p>
-        <a class="text-link" href="#contato">Fale com a gente
-          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section class="section services" id="servicos">
-    <div class="container">
-      <div class="services-head">
-        <div>
-          <p class="eyebrow">Como podemos ajudar</p>
-          <h2 class="title">Feito para facilitar <em>o seu dia.</em></h2>
-        </div>
-        <p class="lead">Escolha a forma que combina com você. Estamos aqui para tornar sua experiência mais simples e próxima.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <div class="card-top">
-            <span class="ico" aria-hidden="true"><svg class="ic" focusable="false"><use href="#i-pin"/></svg></span>
-            <span class="num" aria-hidden="true">01</span>
-          </div>
-          <h3>Compras na loja</h3>
-          <p>Visite nossa loja no Centro de Poços de Caldas.</p>
-          <a class="card-arrow" aria-label="Compras na loja: ver no Google Maps" href="https://www.google.com/maps/search/?api=1&query=Pesos+e+Medidas+Produtos+Naturais%2C+R.+Rio+de+Janeiro%2C+336%2C+Centro%2C+Po%C3%A7os+de+Caldas%2C+MG" target="_blank" rel="noopener noreferrer">
-            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-          </a>
-        </article>
-
-        <article class="card dark">
-          <div class="card-top">
-            <span class="ico" aria-hidden="true"><svg class="ic" focusable="false"><use href="#i-bag"/></svg></span>
-            <span class="num" aria-hidden="true">02</span>
-          </div>
-          <h3>Retirada na loja</h3>
-          <p>Faça seu pedido e combine a retirada.</p>
-          <a class="card-arrow" aria-label="Retirada na loja: combinar pelo WhatsApp" href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20e%20combinar%20a%20retirada%20na%20loja." target="_blank" rel="noopener noreferrer">
-            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-          </a>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="ico" aria-hidden="true"><svg class="ic" focusable="false"><use href="#i-truck"/></svg></span>
-            <span class="num" aria-hidden="true">03</span>
-          </div>
-          <h3>Entrega</h3>
-          <p>Consulte a disponibilidade de entrega.</p>
-          <a class="card-arrow" aria-label="Entrega: consultar disponibilidade pelo WhatsApp" href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20disponibilidade%20de%20entrega." target="_blank" rel="noopener noreferrer">
-            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUTOS -->
-  <section class="section products" id="produtos">
-    <div class="container">
-      <div class="products-head">
-        <div>
-          <p class="eyebrow">Nossa seleção</p>
-          <h2 class="title">Conheça nossos <em>produtos.</em></h2>
-        </div>
-        <p class="lead">Encontre rapidamente o que procura. Pesquise pelo nome ou escolha uma categoria.</p>
-      </div>
-
-      <div class="products-tools">
-        <input class="products-search" id="product-search" type="search" placeholder="🔎  Buscar produto..." autocomplete="off">
-        <div class="category-list" id="category-list" aria-label="Categorias de produtos"></div>
-        <p class="products-count" id="products-count"></p>
-      </div>
-
-      <div class="products-grid" id="products-grid"></div>
-      <div class="products-more" id="products-more" hidden><button type="button">Ver mais produtos</button></div>
-      <div class="product-empty" id="products-empty" hidden>
-        <h3>Produtos em breve</h3>
-        <p>Estamos preparando nosso catálogo. Para consultar os produtos disponíveis agora, fale com a gente pelo WhatsApp.</p>
-        <a class="btn btn-light" href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20saber%20quais%20produtos%20est%C3%A3o%20dispon%C3%ADveis." target="_blank" rel="noopener noreferrer">
-          Consultar produtos
-          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- AVALIAÇÕES -->
-  <section class="section reviews" id="avaliacoes">
-    <div class="container rating-grid">
-      <div>
-        <p class="eyebrow">A palavra de quem conhece</p>
-        <h2 class="title">Confiança que <em>se compartilha.</em></h2>
-      </div>
-
-      <div class="rating" role="group" aria-label="Nota 5,0 de 5,0, com base em 6 avaliações de clientes">
-        <div class="stars" aria-hidden="true">
-          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
-        </div>
-        <p class="score"><strong>5,0</strong><span>/5,0</span></p>
-        <p class="count">6 avaliações de clientes</p>
-        <hr>
-        <p class="rating-note">Informação baseada na avaliação informada pela loja.</p>
-
-        <!--
-          COMENTÁRIOS REAIS DE CLIENTES
-          Para exibir um comentário, cole o bloco abaixo logo depois do <hr> acima e troque pelo texto real.
-          Use somente avaliações verdadeiras.
-
-          <figure style="margin:0 0 30px">
-            <blockquote class="quote" style="margin:0">“Texto do comentário do cliente.”</blockquote>
-            <figcaption class="quote-by">— Nome do cliente</figcaption>
-          </figure>
-        -->
-      </div>
-    </div>
-  </section>
-
-  <!-- LOCALIZAÇÃO -->
-  <section class="section location" id="localizacao">
-    <div class="container loc-grid">
-      <div>
-        <p class="eyebrow">Visite a nossa loja</p>
-        <h2 class="title">Estamos no <em>coração da cidade.</em></h2>
-
-        <div class="place">
-          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
-          <strong>Pesos e Medidas Produtos Naturais</strong>
-          <address>
-            R. Rio de Janeiro, 336 – Centro<br>
-            Poços de Caldas – MG<br>
-            CEP: 37701-011
-          </address>
-        </div>
-
-        <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Pesos+e+Medidas+Produtos+Naturais%2C+R.+Rio+de+Janeiro%2C+336%2C+Centro%2C+Po%C3%A7os+de+Caldas%2C+MG" target="_blank" rel="noopener noreferrer">
-          Ver no Google Maps
-          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-        </a>
-      </div>
-
-      <div class="loc-map">
-        <a class="map-card" aria-label="Abrir a localização da loja no Google Maps" href="https://www.google.com/maps/search/?api=1&query=Pesos+e+Medidas+Produtos+Naturais%2C+R.+Rio+de+Janeiro%2C+336%2C+Centro%2C+Po%C3%A7os+de+Caldas%2C+MG" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 340 260" aria-hidden="true" focusable="false">
-            <defs><clipPath id="mapclip"><rect width="340" height="260"/></clipPath></defs>
-            <rect width="340" height="260" fill="#D9DDCF"/>
-            <g clip-path="url(#mapclip)">
-              <g transform="rotate(25 170 130)" stroke="#CDD3C2" stroke-width="3.5" fill="none">
-                <path d="M-200 -20H540M-200 50H540M-200 120H540M-200 190H540M-200 260H540M-200 330H540"/>
-                <path d="M-40 -260V520M40 -260V520M120 -260V520M200 -260V520M280 -260V520M360 -260V520M440 -260V520"/>
-              </g>
-            </g>
-            <text x="322" y="34" text-anchor="end" font-family="Roboto,Arial,sans-serif" font-size="12" font-weight="700" fill="#27523E">N</text>
-            <circle cx="206" cy="140" r="42" fill="#C3CAB9" opacity=".75"/>
-            <g transform="translate(206 128)">
-              <path d="M0 -34C-19 -34 -34 -19 -34 0C-34 22 0 50 0 50C0 50 34 22 34 0C34 -19 19 -34 0 -34Z" fill="#27523E"/>
-              <circle cx="0" cy="-2" r="10" fill="none" stroke="#F6F7ED" stroke-width="2.5"/>
-              <circle cx="0" cy="-2" r="3" fill="#F6F7ED"/>
-            </g>
-            <rect x="25" y="170" width="160" height="66" fill="#F6F7ED"/>
-            <text x="43" y="199" font-family="Newsreader,Georgia,serif" font-size="18" fill="#1E3328">Pesos e Medidas</text>
-            <text x="43" y="221" font-family="Roboto,Arial,sans-serif" font-size="11.5" fill="#5A665A">Centro · Poços de Caldas</text>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section class="section contact" id="contato">
-    <div class="container contact-grid">
-      <div>
-        <p class="eyebrow light">Vamos conversar?</p>
-        <h2 class="title light">Fale com a <em>Pesos e Medidas.</em></h2>
-      </div>
-
-      <div>
-        <div class="contact-list">
-          <a href="tel:+5535984081221">
-            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
-            (35) 98408-1221
-          </a>
-          <a href="https://www.instagram.com/pesosemedidaspocos/" target="_blank" rel="noopener noreferrer">
-            <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-insta"/></svg>
-            @pesosemedidaspocos
-          </a>
-        </div>
+      <div class="hero-actions">
         <a class="btn btn-light" href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Pesos%20e%20Medidas." target="_blank" rel="noopener noreferrer">
-          Conversar pelo WhatsApp
-          <svg class="ic" aria-hidden="true" focusable="false" style="color:#729060"><use href="#i-arrow"/></svg>
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+          Falar no WhatsApp
+        </a>
+
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Pesos+e+Medidas+Produtos+Naturais%2C+R.+Rio+de+Janeiro%2C+336%2C+Centro%2C+Po%C3%A7os+de+Caldas%2C+MG" target="_blank" rel="noopener noreferrer">
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+          Como chegar
         </a>
       </div>
+
+      <p class="hero-place">Centro de Poços de Caldas, MG</p>
     </div>
-  </section>
+
+    <div class="hero-art">
+      <svg viewBox="0 0 340 340" role="img" aria-label="Ilustração decorativa: cartaz em um cavalete com folhas">
+        <circle cx="170" cy="170" r="168" fill="none" stroke="#fff" stroke-opacity=".16"/>
+        <circle cx="170" cy="170" r="134" fill="none" stroke="#fff" stroke-opacity=".12"/>
+        <path d="M140 250L124 312M190 262L208 314" stroke="#A9BF9A" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+        <g transform="rotate(8 170 170)">
+          <rect x="110" y="72" width="168" height="212" fill="#1F4A37"/>
+          <rect x="96" y="58" width="164" height="210" fill="#EFE7D6"/>
+          <text x="112" y="100" font-family="Roboto,Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2.4" fill="#5C7A68">UMA ESCOLHA</text>
+          <text x="110" y="150" font-family="Newsreader,Georgia,serif" font-size="44" fill="#1F4A37">mais</text>
+          <text x="106" y="192" font-family="Newsreader,Georgia,serif" font-size="44" font-style="italic" fill="#B5673E">natural</text>
+          <use href="#lf" x="112" y="180" width="48" height="19" transform="rotate(-42 136 190)" style="color:#B7C9A7" opacity=".92"/>
+          <path d="M112 236H152" stroke="#B5673E" stroke-width="2" stroke-linecap="round"/>
+        </g>
+
+        <use href="#lf" x="226" y="52" width="58" height="23" transform="rotate(14 255 63)" style="color:#B7C9A7"/>
+        <path d="M262 214L284 152" stroke="#8FAA80" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <use href="#lf" x="266" y="118" width="54" height="21" transform="rotate(-68 293 128)" style="color:#8FAA80"/>
+        <use href="#lf" x="226" y="290" width="62" height="24" transform="rotate(22 257 302)" style="color:#B7C9A7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="sobre">
+  <div class="container about-grid">
+    <div>
+      <div class="sec-num" aria-hidden="true">01</div>
+      <p class="eyebrow">Sobre a loja</p>
+      <h2 class="title">O cuidado que cabe <em>na sua rotina.</em></h2>
+    </div>
+
+    <div class="about-copy">
+      <p>Na Pesos e Medidas Produtos Naturais, você encontra uma seleção de produtos naturais e um atendimento próximo e atencioso. Nossa loja está localizada no Centro de Poços de Caldas, oferecendo também opções de retirada e entrega.</p>
+      <a class="text-link" href="#contato">
+        Fale com a gente
+        <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="servicos">
+  <div class="container">
+    <div class="services-head">
+      <div>
+        <p class="eyebrow">Como podemos ajudar</p>
+        <h2 class="title">Feito para facilitar <em>o seu dia.</em></h2>
+      </div>
+
+      <p class="lead">Escolha a forma que combina com você. Estamos aqui para tornar sua experiência mais simples e próxima.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-top">
+          <span class="ico" aria-hidden="true"><svg class="ic" focusable="false"><use href="#i-pin"/></svg></span>
+          <span class="num" aria-hidden="true">01</span>
+        </div>
+        <h3>Compras na loja</h3>
+        <p>Visite nossa loja no Centro de Poços de Caldas.</p>
+        <a class="card-arrow" aria-label="Compras na loja: ver no Google Maps" href="https://www.google.com/maps/search/?api=1&query=Pesos+e+Medidas+Produtos+Naturais%2C+R.+Rio+de+Janeiro%2C+336%2C+Centro%2C+Po%C3%A7os+de+Caldas%2C+MG" target="_blank" rel="noopener noreferrer">
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+        </a>
+      </article>
+
+      <article class="card dark">
+        <div class="card-top">
+          <span class="ico" aria-hidden="true"><svg class="ic" focusable="false"><use href="#i-bag"/></svg></span>
+          <span class="num" aria-hidden="true">02</span>
+        </div>
+        <h3>Retirada na loja</h3>
+        <p>Faça seu pedido e combine a retirada.</p>
+        <a class="card-arrow" aria-label="Retirada na loja: combinar pelo WhatsApp" href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20e%20combinar%20a%20retirada%20na%20loja." target="_blank" rel="noopener noreferrer">
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+        </a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="ico" aria-hidden="true"><svg class="ic" focusable="false"><use href="#i-truck"/></svg></span>
+          <span class="num" aria-hidden="true">03</span>
+        </div>
+        <h3>Entrega</h3>
+        <p>Consulte a disponibilidade de entrega.</p>
+        <a class="card-arrow" aria-label="Entrega: consultar disponibilidade pelo WhatsApp" href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20disponibilidade%20de%20entrega." target="_blank" rel="noopener noreferrer">
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section products" id="produtos">
+  <div class="container">
+
+    <div class="products-head">
+      <div>
+        <p class="eyebrow">Nossa seleção</p>
+        <h2 class="title">Conheça nossos <em>produtos.</em></h2>
+      </div>
+
+      <p class="lead">Encontre rapidamente o que procura. Pesquise pelo nome ou escolha uma categoria.</p>
+    </div>
+
+    <div class="products-tools">
+      <input class="products-search" id="product-search" type="search" placeholder="🔎  Buscar produto..." autocomplete="off">
+      <div class="category-list" id="category-list" aria-label="Categorias de produtos"></div>
+      <p class="products-count" id="products-count"></p>
+    </div>
+
+    <div class="products-grid" id="products-grid"></div>
+
+    <div class="products-more" id="products-more" hidden>
+      <button type="button">Ver mais produtos</button>
+    </div>
+
+    <div class="product-empty" id="products-empty" hidden>
+      <h3>Produtos em breve</h3>
+      <p>Estamos preparando nosso catálogo. Para consultar os produtos disponíveis agora, fale com a gente pelo WhatsApp.</p>
+
+      <a class="btn btn-light" href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20saber%20quais%20produtos%20est%C3%A3o%20dispon%C3%ADveis." target="_blank" rel="noopener noreferrer">
+        Consultar produtos
+        <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section reviews" id="avaliacoes">
+  <div class="container rating-grid">
+
+    <div>
+      <p class="eyebrow">A palavra de quem conhece</p>
+      <h2 class="title">Confiança que <em>se compartilha.</em></h2>
+    </div>
+
+    <div class="rating" role="group" aria-label="Nota 5,0 de 5,0, com base em 6 avaliações de clientes">
+
+      <div class="stars" aria-hidden="true">
+        <svg><use href="#i-star"/></svg>
+        <svg><use href="#i-star"/></svg>
+        <svg><use href="#i-star"/></svg>
+        <svg><use href="#i-star"/></svg>
+        <svg><use href="#i-star"/></svg>
+      </div>
+
+      <p class="score"><strong>5,0</strong><span>/5,0</span></p>
+      <p class="count">6 avaliações de clientes</p>
+
+      <hr>
+
+      <p class="rating-note">Informação baseada na avaliação informada pela loja.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section location" id="localizacao">
+  <div class="container loc-grid">
+
+    <div>
+      <p class="eyebrow">Visite a nossa loja</p>
+      <h2 class="title">Estamos no <em>coração da cidade.</em></h2>
+
+      <div class="place">
+        <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+        <strong>Pesos e Medidas Produtos Naturais</strong>
+
+        <address>
+          R. Rio de Janeiro, 336 – Centro<br>
+          Poços de Caldas – MG<br>
+          CEP: 37701-011
+        </address>
+      </div>
+
+      <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Pesos+e+Medidas+Produtos+Naturais%2C+R.+Rio+de+Janeiro%2C+336%2C+Centro%2C+Po%C3%A7os+de+Caldas%2C+MG" target="_blank" rel="noopener noreferrer">
+        Ver no Google Maps
+        <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+
+    <div class="loc-map">
+      <a class="map-card" aria-label="Abrir a localização da loja no Google Maps" href="https://www.google.com/maps/search/?api=1&query=Pesos+e+Medidas+Produtos+Naturais%2C+R.+Rio+de+Janeiro%2C+336%2C+Centro%2C+Po%C3%A7os+de+Caldas%2C+MG" target="_blank" rel="noopener noreferrer">
+
+        <svg viewBox="0 0 340 260" aria-hidden="true" focusable="false">
+
+          <defs>
+            <clipPath id="mapclip">
+              <rect width="340" height="260"/>
+            </clipPath>
+          </defs>
+
+          <rect width="340" height="260" fill="#D9DDCF"/>
+
+          <g clip-path="url(#mapclip)">
+            <g transform="rotate(25 170 130)" stroke="#CDD3C2" stroke-width="3.5" fill="none">
+              <path d="M-200 -20H540M-200 50H540M-200 120H540M-200 190H540M-200 260H540M-200 330H540"/>
+              <path d="M-40 -260V520M40 -260V520M120 -260V520M200 -260V520M280 -260V520M360 -260V520M440 -260V520"/>
+            </g>
+          </g>
+
+          <text x="322" y="34" text-anchor="end" font-family="Roboto,Arial,sans-serif" font-size="12" font-weight="700" fill="#27523E">N</text>
+
+          <circle cx="206" cy="140" r="42" fill="#C3CAB9" opacity=".75"/>
+
+          <g transform="translate(206 128)">
+            <path d="M0 -34C-19 -34 -34 -19 -34 0C-34 22 0 50 0 50C0 50 34 22 34 0C34 -19 19 -34 0 -34Z" fill="#27523E"/>
+            <circle cx="0" cy="-2" r="10" fill="none" stroke="#F6F7ED" stroke-width="2.5"/>
+            <circle cx="0" cy="-2" r="3" fill="#F6F7ED"/>
+          </g>
+
+          <rect x="25" y="170" width="160" height="66" fill="#F6F7ED"/>
+          <text x="43" y="199" font-family="Newsreader,Georgia,serif" font-size="18" fill="#1E3328">Pesos e Medidas</text>
+          <text x="43" y="221" font-family="Roboto,Arial,sans-serif" font-size="11.5" fill="#5A665A">Centro · Poços de Caldas</text>
+
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section contact" id="contato">
+  <div class="container contact-grid">
+
+    <div>
+      <p class="eyebrow light">Vamos conversar?</p>
+      <h2 class="title light">Fale com a <em>Pesos e Medidas.</em></h2>
+    </div>
+
+    <div>
+
+      <div class="contact-list">
+
+        <a href="tel:+5535984081221">
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+          (35) 98408-1221
+        </a>
+
+        <a href="https://www.instagram.com/pesosemedidaspocos/" target="_blank" rel="noopener noreferrer">
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-insta"/></svg>
+          @pesosemedidaspocos
+        </a>
+
+      </div>
+
+      <a class="btn btn-light" href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Pesos%20e%20Medidas." target="_blank" rel="noopener noreferrer">
+        Conversar pelo WhatsApp
+        <svg class="ic" aria-hidden="true" focusable="false" style="color:#729060"><use href="#i-arrow"/></svg>
+      </a>
+
+    </div>
+
+  </div>
+</section>
 
 </main>
 
-
 <footer class="site-footer">
+
   <div class="container">
+
     <div class="footer-grid">
+
       <a class="brand" href="#inicio" aria-label="Voltar ao início">
         <span class="logo" aria-hidden="true"><span>p</span><span>m</span></span>
         <span class="brand-text"><strong>Pesos e Medidas</strong><small>Produtos Naturais</small></span>
       </a>
+
       <address>
         R. Rio de Janeiro, 336 – Centro<br>
         Poços de Caldas – MG
       </address>
+
       <ul class="f-links">
-        <li><a href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Pesos%20e%20Medidas." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-        <li><a href="https://www.instagram.com/pesosemedidaspocos/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li>
+          <a href="https://wa.me/5535984081221?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Pesos%20e%20Medidas." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/pesosemedidaspocos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </li>
       </ul>
+
     </div>
+
     <div class="copy">
       <p>© 2026 Pesos e Medidas Produtos Naturais. Todos os direitos reservados.</p>
       <p>Poços de Caldas · MG</p>
     </div>
+
   </div>
+
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
+
 <script>
+
 (function () {
+
   var btn = document.getElementById('nav-toggle');
   var nav = document.getElementById('site-nav');
+
   if (!btn || !nav) return;
 
   function setOpen(open) {
+
     nav.classList.toggle('open', open);
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+
+    btn.setAttribute(
+      'aria-expanded',
+      open ? 'true' : 'false'
+    );
+
+    btn.setAttribute(
+      'aria-label',
+      open ? 'Fechar menu' : 'Abrir menu'
+    );
+
   }
 
   btn.addEventListener('click', function () {
@@ -726,74 +800,437 @@ section[id]{scroll-margin-top:12px}
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { setOpen(false); btn.focus(); }
+    if (e.key === 'Escape') {
+      setOpen(false);
+      btn.focus();
+    }
   });
 
   window.addEventListener('resize', function () {
     if (window.innerWidth >= 900) setOpen(false);
   });
+
 })();
 
+
 /* ---------- Catálogo online ---------- */
+
 (function(){
+
   var activeCategory = 'Todos';
   var visibleLimit = 8;
   var productsCache = [];
+
   var SUPABASE_URL = window.SUPABASE_URL;
   var SUPABASE_PUBLISHABLE_KEY = window.SUPABASE_PUBLISHABLE_KEY;
 
-  function esc(v){ return String(v || '').replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]; }); }
-  function client(){ return window.supabase && window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY); }
-  function validConfig(){ return !!(SUPABASE_URL && SUPABASE_PUBLISHABLE_KEY && SUPABASE_URL.indexOf('COLE_AQUI') === -1 && SUPABASE_PUBLISHABLE_KEY.indexOf('COLE_AQUI') === -1); }
+
+  function esc(v){
+
+    return String(v || '').replace(
+      /[&<>"']/g,
+      function(c){
+        return {
+          '&':'&amp;',
+          '<':'&lt;',
+          '>':'&gt;',
+          '"':'&quot;',
+          "'":'&#039;'
+        }[c];
+      }
+    );
+
+  }
+
+
+  function client(){
+
+    return window.supabase &&
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_PUBLISHABLE_KEY
+      );
+
+  }
+
+
+  function validConfig(){
+
+    return !!(
+      SUPABASE_URL &&
+      SUPABASE_PUBLISHABLE_KEY &&
+      SUPABASE_URL.indexOf('COLE_AQUI') === -1 &&
+      SUPABASE_PUBLISHABLE_KEY.indexOf('COLE_AQUI') === -1
+    );
+
+  }
+
 
   function getCategories(products){
+
     var set = {};
-    products.forEach(function(p){ var c=(p.category||'').trim(); if(c) set[c]=true; });
-    return Object.keys(set).sort(function(a,b){return a.localeCompare(b,'pt-BR');});
-  }
-  function renderFilters(products){
-    var box=document.getElementById('category-list'); if(!box)return;
-    var cats=['Todos'].concat(getCategories(products));
-    if(cats.indexOf(activeCategory)===-1)activeCategory='Todos';
-    box.innerHTML=cats.map(function(c){return '<button type="button" class="category-btn '+(c===activeCategory?'active':'')+'" data-category="'+esc(c)+'">'+esc(c)+'</button>';}).join('');
-  }
-  function buyWhatsApp(p){
-    var msg='Olá! Gostaria de comprar o produto: '+(p.name||'')+(p.price?'. Preço: '+p.price:'')+'.';
-    window.open('https://wa.me/5535984081221?text='+encodeURIComponent(msg),'_blank','noopener');
-  }
-  function renderPublic(resetLimit){
-    var grid=document.getElementById('products-grid'), empty=document.getElementById('products-empty'), more=document.getElementById('products-more'), count=document.getElementById('products-count'), search=document.getElementById('product-search');
-    if(!grid||!empty)return;
-    if(resetLimit)visibleLimit=8;
-    var products=productsCache.slice(); renderFilters(products);
-    var term=search?search.value.trim().toLocaleLowerCase('pt-BR'):'';
-    var filtered=products.filter(function(p){var cat=activeCategory==='Todos'||(p.category||'')===activeCategory;var hay=((p.name||'')+' '+(p.description||'')+' '+(p.category||'')).toLocaleLowerCase('pt-BR');return cat&&(!term||hay.indexOf(term)!==-1);});
-    grid.innerHTML='';
-    filtered.slice(0,visibleLimit).forEach(function(p){
-      var card=document.createElement('article'); card.className='product-card';
-      var photo=p.image?'<img src="'+esc(p.image)+'" alt="'+esc(p.name)+'" style="width:100%;height:100%;object-fit:contain">':'<span>Sem foto</span>';
-      card.innerHTML='<div class="product-photo">'+photo+'</div><div class="product-info"><h3>'+esc(p.name)+'</h3>'+(p.category?'<p style="font-size:.78rem;font-weight:700;color:var(--sage-ink);text-transform:uppercase;letter-spacing:.06em">'+esc(p.category)+'</p>':'')+(p.description?'<p>'+esc(p.description)+'</p>':'')+'<span class="product-price">'+esc(p.price)+'</span></div>';
-      if(p.sold_out){card.style.opacity='.72';card.querySelector('.product-info').insertAdjacentHTML('beforeend','<strong style="display:block;margin-top:8px;color:#8b3f2c;font-size:.82rem">ESGOTADO</strong>');}
-      else { var b=document.createElement('button'); b.type='button'; b.className='btn btn-light'; b.style.marginTop='12px'; b.textContent='Comprar pelo WhatsApp'; b.addEventListener('click',function(){buyWhatsApp(p);}); card.querySelector('.product-info').appendChild(b); }
-      grid.appendChild(card);
+
+    products.forEach(function(p){
+
+      var c = (p.category || '').trim();
+
+      if(c) set[c] = true;
+
     });
-    empty.hidden=filtered.length!==0;
-    if(!filtered.length){empty.querySelector('h3').textContent=products.length?'Nenhum produto encontrado':'Produtos em breve';empty.querySelector('p').textContent=products.length?'Tente outro nome ou escolha outra categoria.':'Estamos preparando nosso catálogo. Para consultar os produtos disponíveis agora, fale com a gente pelo WhatsApp.';}
-    if(count)count.textContent=filtered.length?(filtered.length+(filtered.length===1?' produto':' produtos')):'';
-    if(more)more.hidden=filtered.length<=visibleLimit;
+
+    return Object.keys(set).sort(
+      function(a,b){
+        return a.localeCompare(b,'pt-BR');
+      }
+    );
+
   }
+
+
+  function renderFilters(products){
+
+    var box = document.getElementById('category-list');
+
+    if(!box)return;
+
+    var cats = ['Todos'].concat(
+      getCategories(products)
+    );
+
+    if(cats.indexOf(activeCategory) === -1){
+      activeCategory = 'Todos';
+    }
+
+    box.innerHTML = cats.map(function(c){
+
+      return '<button type="button" class="category-btn '+
+        (c === activeCategory ? 'active' : '')+
+        '" data-category="'+esc(c)+'">'+
+        esc(c)+
+        '</button>';
+
+    }).join('');
+
+  }
+
+
+  function buyWhatsApp(p){
+
+    var msg =
+      'Olá! Gostaria de comprar o produto: '+
+      (p.name || '')+
+      (p.price ? '. Preço: '+p.price : '')+
+      '.';
+
+    window.open(
+      'https://wa.me/5535984081221?text='+
+      encodeURIComponent(msg),
+      '_blank',
+      'noopener'
+    );
+
+  }
+
+
+  function renderPublic(resetLimit){
+
+    var grid = document.getElementById('products-grid');
+    var empty = document.getElementById('products-empty');
+    var more = document.getElementById('products-more');
+    var count = document.getElementById('products-count');
+    var search = document.getElementById('product-search');
+
+    if(!grid || !empty)return;
+
+    if(resetLimit)visibleLimit=8;
+
+    var products = productsCache.slice();
+
+    renderFilters(products);
+
+    var term = search
+      ? search.value.trim().toLocaleLowerCase('pt-BR')
+      : '';
+
+    var filtered = products.filter(function(p){
+
+      var cat =
+        activeCategory === 'Todos' ||
+        (p.category || '') === activeCategory;
+
+      var hay =
+        (
+          (p.name || '')+
+          ' '+
+          (p.description || '')+
+          ' '+
+          (p.category || '')
+        ).toLocaleLowerCase('pt-BR');
+
+      return cat &&
+        (!term || hay.indexOf(term) !== -1);
+
+    });
+
+
+    grid.innerHTML = '';
+
+
+    filtered
+      .slice(0,visibleLimit)
+      .forEach(function(p){
+
+        var card = document.createElement('article');
+
+        card.className = 'product-card';
+
+
+        /*
+          ALTERAÇÃO:
+          object-fit:cover faz a imagem preencher
+          completamente o quadrado do produto.
+        */
+
+        var photo = p.image
+
+          ? '<img src="'+
+            esc(p.image)+
+            '" alt="'+
+            esc(p.name)+
+            '" style="width:100%;height:100%;object-fit:cover;display:block">'
+
+          : '<span>Sem foto</span>';
+
+
+        card.innerHTML =
+          '<div class="product-photo">'+
+            photo+
+          '</div>'+
+
+          '<div class="product-info">'+
+
+            '<h3>'+
+              esc(p.name)+
+            '</h3>'+
+
+            (
+              p.category
+              ? '<p style="font-size:.78rem;font-weight:700;color:var(--sage-ink);text-transform:uppercase;letter-spacing:.06em">'+
+                  esc(p.category)+
+                '</p>'
+              : ''
+            )+
+
+            (
+              p.description
+              ? '<p>'+
+                  esc(p.description)+
+                '</p>'
+              : ''
+            )+
+
+            '<span class="product-price">'+
+              esc(p.price)+
+            '</span>'+
+
+          '</div>';
+
+
+        if(p.sold_out){
+
+          card.style.opacity='.72';
+
+          card
+            .querySelector('.product-info')
+            .insertAdjacentHTML(
+              'beforeend',
+              '<strong style="display:block;margin-top:8px;color:#8b3f2c;font-size:.82rem">ESGOTADO</strong>'
+            );
+
+        }
+
+        else {
+
+          var b = document.createElement('button');
+
+          b.type = 'button';
+
+          b.className = 'btn btn-light';
+
+          b.style.marginTop = '12px';
+
+          b.textContent = 'Comprar pelo WhatsApp';
+
+          b.addEventListener(
+            'click',
+            function(){
+              buyWhatsApp(p);
+            }
+          );
+
+          card
+            .querySelector('.product-info')
+            .appendChild(b);
+
+        }
+
+
+        grid.appendChild(card);
+
+      });
+
+
+    empty.hidden = filtered.length !== 0;
+
+
+    if(!filtered.length){
+
+      empty.querySelector('h3').textContent =
+        products.length
+        ? 'Nenhum produto encontrado'
+        : 'Produtos em breve';
+
+      empty.querySelector('p').textContent =
+        products.length
+        ? 'Tente outro nome ou escolha outra categoria.'
+        : 'Estamos preparando nosso catálogo. Para consultar os produtos disponíveis agora, fale com a gente pelo WhatsApp.';
+
+    }
+
+
+    if(count){
+
+      count.textContent = filtered.length
+        ? filtered.length+
+          (filtered.length === 1
+            ? ' produto'
+            : ' produtos')
+        : '';
+
+    }
+
+
+    if(more){
+
+      more.hidden =
+        filtered.length <= visibleLimit;
+
+    }
+
+  }
+
+
   async function load(){
-    if(!validConfig()){ productsCache=[]; renderPublic(true); return; }
-    var sb=client();
-    var result=await sb.from('products').select('*').order('id',{ascending:false});
-    if(result.error){ console.error(result.error); productsCache=[]; renderPublic(true); return; }
-    productsCache=result.data||[]; renderPublic(true);
+
+    if(!validConfig()){
+
+      productsCache=[];
+
+      renderPublic(true);
+
+      return;
+
+    }
+
+
+    var sb = client();
+
+
+    var result =
+      await sb
+        .from('products')
+        .select('*')
+        .order('id',{ascending:false});
+
+
+    if(result.error){
+
+      console.error(result.error);
+
+      productsCache=[];
+
+      renderPublic(true);
+
+      return;
+
+    }
+
+
+    productsCache =
+      result.data || [];
+
+    renderPublic(true);
+
   }
-  var search=document.getElementById('product-search'); if(search)search.addEventListener('input',function(){renderPublic(true);});
-  var cats=document.getElementById('category-list'); if(cats)cats.addEventListener('click',function(e){var b=e.target.closest('[data-category]');if(!b)return;activeCategory=b.getAttribute('data-category')||'Todos';renderPublic(true);});
-  var moreButton=document.querySelector('#products-more button'); if(moreButton)moreButton.addEventListener('click',function(){visibleLimit+=8;renderPublic(false);});
+
+
+  var search =
+    document.getElementById('product-search');
+
+  if(search){
+
+    search.addEventListener(
+      'input',
+      function(){
+        renderPublic(true);
+      }
+    );
+
+  }
+
+
+  var cats =
+    document.getElementById('category-list');
+
+  if(cats){
+
+    cats.addEventListener(
+      'click',
+      function(e){
+
+        var b =
+          e.target.closest('[data-category]');
+
+        if(!b)return;
+
+        activeCategory =
+          b.getAttribute('data-category') ||
+          'Todos';
+
+        renderPublic(true);
+
+      }
+    );
+
+  }
+
+
+  var moreButton =
+    document.querySelector(
+      '#products-more button'
+    );
+
+  if(moreButton){
+
+    moreButton.addEventListener(
+      'click',
+      function(){
+
+        visibleLimit += 8;
+
+        renderPublic(false);
+
+      }
+    );
+
+  }
+
+
   load();
+
 })();
+
 </script>
+
 </body>
 </html>
